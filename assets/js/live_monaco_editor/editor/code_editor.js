@@ -53,6 +53,7 @@ class CodeEditor {
 
     loader.init().then((monaco) => {
       monaco.editor.defineTheme("default", theme)
+      monaco.editor.remeasureFonts();
 
       let modelUri = monaco.Uri.parse(this.path)
       let language = this.opts.language
